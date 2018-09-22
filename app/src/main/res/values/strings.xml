@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Pokédex</string>
+    <string name="search">Buscar un pokémon por código (1-949)</string>
+</resources>
