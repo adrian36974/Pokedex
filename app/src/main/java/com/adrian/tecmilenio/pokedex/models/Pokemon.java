@@ -25,9 +25,7 @@ public class Pokemon {
         String[] urlPartes = url.split("/");
         return Integer.parseInt(urlPartes[urlPartes.length - 1]);
     }
-
     public void setNumber(int number) {
         this.number = number;
     }
 }
-

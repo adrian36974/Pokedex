@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service android:name=".services.BackgroundService" />
         <activity android:name=".activities.PokemonListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,14 +20,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.PokemonDetailActivity"
+        <activity
+            android:name=".activities.PokemonDetailActivity"
             android:parentActivityName=".activities.PokemonListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.PokemonListActivity"/>
+                android:value=".activities.PokemonListActivity" />
             <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.PokeGame"
+            android:launchMode="singleTop"
+            android:label="Who's that pokemon?"
+            android:parentActivityName=".activities.PokemonListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.PokemonListActivity" />
         </activity>
     </application>
 
